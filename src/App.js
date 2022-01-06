@@ -1,12 +1,18 @@
 import './App.css';
-import { Music } from './pages'
+import { Music, Tour } from './pages';
 import React from 'react';
+import { Routes, Route } from 'react-router-dom';
+import { Header } from './layout';
 
 function App(){
 
   return(
     <>
-      <Music />
+      <Header />
+      <Routes>
+        <Route path='/' element={<Music />} />
+        <Route path='/tour' element={<Tour />} />
+      </Routes>
     </>
   );
 };

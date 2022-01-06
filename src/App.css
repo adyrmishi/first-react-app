@@ -32,6 +32,10 @@ ul span {
   background: honeydew;
 }
 
+span {
+  font-size: 20px;
+}
+
 #feature {
   margin: 0px 20px;
   background: honeydew;
