@@ -3,7 +3,7 @@ nav {
     justify-content: center;
     padding: 10px;
     align-items: flex-end;
-    background: #897891;
+    background: #ac861e;
 
 }
 
@@ -12,9 +12,9 @@ nav > * {
     color: black;
     font-size: 25px;
     padding: 0px 10px;
-    background: #897891;
+    background: #ac861e;
 }
 
 i {
-    background: #897891;
+    background: #ac861e;
 }

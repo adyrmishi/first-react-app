@@ -8,9 +8,10 @@ const Lyrics = ({ songTitle }) => {
         const fetchLyrics = async() => {
             setStatusMessage('Loading')
             try {
-                let { data } = await axios.get(`https://api.lyrics.ovh/v1/little%20simz/offence`);
+                let { data } = await axios.get(`https://api.lyrics.ovh/v1/little%20simz/${songTitle}`);
                 setLyrics(data.lyrics);
                 setStatusMessage('');
+                console.log(lyrics)
             } catch (err) {
                 console.warn(err);
                 setStatusMessage(`Oops there\'s been an issue! ${err.message}`);
