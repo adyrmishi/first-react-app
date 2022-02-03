@@ -23,7 +23,6 @@ const Lyrics = ({ songTitle }) => {
     return (
     <>
         {
-            // <p>{lyrics.l}</p>
             <p>{lyrics}</p>
         }
     </>

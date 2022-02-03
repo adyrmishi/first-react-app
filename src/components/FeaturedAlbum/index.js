@@ -15,7 +15,7 @@ const FeaturedAlbum = ({ albumYear, handleLyrics }) => {
         <ul>
             {
                 songlist.map(song => (
-                    <li key={song} onClick={() => handleLyrics(song)}><FaveButton />  {song}</li>
+                    <li className='songname' key={song} onClick={() => handleLyrics(song)}><FaveButton />  {song}</li>
                 ))
             }
         </ul>

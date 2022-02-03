@@ -1,9 +1,28 @@
-import React, { useState } from 'react';
+import React, { useState, useRef, useEffect } from 'react';
 import { Albums, FeaturedAlbum, Lyrics } from '../../components'
 
 const Music = () => {
     const [ featuredYear, setFeaturedYear ] = useState();
     const [ featuredSong, setFeaturedSong ] = useState();
+
+    if (featuredYear) {
+        songlist = useRef()
+    }
+    if (featuredSong) {
+        lyric = useRef();
+    }
+
+    // useEffect(() => {
+    //     songlist.current.scrollIntoView({behaviour: 'smooth'})
+    // }, [featuredYear])
+
+    // useEffect(() => {
+    //     lyric.current.scrollIntoView({behaviour: 'smooth'})
+    // }, [featuredSong])
+
+    useEffect(() => {
+        setFeaturedSong()
+    }, [featuredYear])
 
     return (
         <div className='music-page'>
@@ -13,10 +32,10 @@ const Music = () => {
                 <Albums handleSelect={setFeaturedYear}/>
             </section>
             <section id='further-info'>
-                <div className='songlist'>
+                <div ref={songlist} className='songlist'>
                     { featuredYear && <FeaturedAlbum handleLyrics={setFeaturedSong} albumYear={featuredYear} /> }
                 </div>
-                <div className='lyrics'>
+                <div ref={lyric} className='lyrics'>
                     { featuredSong && <Lyrics songTitle={featuredSong} />}
                 </div>
             </section>
