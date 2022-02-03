@@ -1,4 +1,4 @@
-* {
+body {
   box-sizing: border-box;
   background-color: gold;
 }
@@ -65,6 +65,10 @@ li:focus {
   height: 100%;
 }
 
+.lyrics {
+  padding: 0px 20px 0px 10px;
+}
+
 .lyrics > * {
   background: black;
   color: white;
@@ -82,7 +86,8 @@ li:focus {
   #further-info {
     display: flex;
     flex-direction: column;
-    justify-content: space-evenly;
+    justify-content: space-between;
+    width: 100%;
   }
 
   #further-info > * {
@@ -90,6 +95,14 @@ li:focus {
   }
 
   .lyrics {
-    padding: 0px 20px;
+    /* margin: 0px 10px 0px 10px; */
+    padding: 10px 20px;
+    width: 50%
   }
+
+  .lyrics > * {
+    width: 200px;
+    padding: 10px 40px;
+  }
+
 }
